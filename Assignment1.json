@@ -1,0 +1,8 @@
+{
+    "name": "REST Api Calls",
+    "main": "Assignment1.js",
+    "description": "Program showing the REST api calls such as get,post,put,delete, etc",
+    "dependencies" {
+        "express": "~3.2.6"
+        }
+}
