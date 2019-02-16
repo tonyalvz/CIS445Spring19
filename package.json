@@ -1,0 +1,27 @@
+{
+  "name": "restapicalls",
+  "version": "1.0.0",
+  "description": "This application handles REST api calls",
+  "main": "assignment1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonyalvz/CIS445Spring19.git"
+  },
+  "keywords": [
+    "any",
+    "keyword"
+  ],
+  "author": "Jesus Alvarez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tonyalvz/CIS445Spring19/issues"
+  },
+  "homepage": "https://github.com/tonyalvz/CIS445Spring19#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "joi": "^14.3.1"
+  }
+}

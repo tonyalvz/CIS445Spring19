@@ -2,13 +2,12 @@ const Joi = require('joi');         //Joi is used for validation
 const express = require('express');
 const app = express();
 
-var router = express.Router();
-
+app.use(express.json());
 
 const players = [
-    {id: 1, name:'CR7'},
-    {id: 2, name:'Messi'},
-    {id: 3, name:'Pogba'},
+    {id: 1, name:'Tfue'},
+    {id: 2, name:'Ghost Aydan'},
+    {id: 3, name:'Nick Mercs'},
 ];
 
 const items = [
@@ -17,20 +16,32 @@ const items = [
     {id: 3, name:'Ammunition'},
 ];
 
+const wins = [
+    { id: 1, totalwins: '10'},
+    { id: 2, totalwins: '5'},
+    { id: 3, totalwins: '4'},
+];
+
+const losses = [
+    { id: 1, totallosses: '2'},
+    { id: 2, totallosses: '3'},
+    { id: 3, totallosses: '1'},
+];
+
 //Gets all players
-app.get('/players', (request, response) => {
+app.get('/players', function (request, response) {
     response.send(players);  //outputs all the players
 });
 
 //Gets a single player
-app.get('/players/:id', (request, response) => {
-    const player = players.find(c => c.id === parseInt(request.params.id));
+app.get('/players/:id', function (request, response) {
+    const player = players.find(c => c.id === parseInt(request.params.id)); //boolean comparison to see if the player is in the players array
     if(!player) return response.status(404).send('The player with the given ID was not found'); // error message if id is not found
     response.send(player);  //outputs player
 });
 
 //Creates a player 
-app.post('/players', (request, response) => {
+app.post('/players', function (request, response) {
     const {error} = validatePlayer(request.body); 
     if(error) return response.status(400).send(error.details[0].message);
     
@@ -44,18 +55,18 @@ app.post('/players', (request, response) => {
 });
 
 //Updates a player
-app.put('/players/:id', (request, response) => {
+app.put('/players/:id', function (request, response) {
     const player = players.find(c => c.id === parseInt(request.params.id));
     if(!player) return response.status(404).send('The player with the given ID was not found'); //the "return" exits the handler if the player is not found
     
-    const {error} = validatePlayer(request.body); //same as result.error, this process if called object destructuring 
+    const {error} = validatePlayer(request.body); //same as result.error, this process is called object destructuring 
     if(error) return response.status(400).send(error.details[0].message);
     
     player.name = request.body.name;
     response.send(player);
 });
 
-app.delete('/players/:id', (request,response) => {
+app.delete('/players/:id', function (request,response) {
     const player = players.find(c => c.id === parseInt(request.params.id));
     if(!player) return response.status(404).send('The player with the given ID was not found');
     
@@ -76,19 +87,19 @@ function validatePlayer(player) {
 
 
 //Gets all items
-app.get('/items', (request, response) => {
+app.get('/items', function (request, response) {
     response.send(items);                      //outputs all the items
 });
 
 //Gets a single item
-app.get('/items/:id', (request, response) => {
+app.get('/items/:id', function (request, response) {
     const item = items.find(c => c.id === parseInt(request.params.id));
     if(!item) return response.status(404).send('The item with the given ID was not found'); 
     response.send(item);  //outputs item
 });
 
 //Creates an item
-app.post('/items', (request, response) => {
+app.post('/items', function (request, response) {
     const {error} = validateItem(request.body); 
     if(error) return response.status(400).send(error.details[0].message);
     
@@ -102,7 +113,7 @@ app.post('/items', (request, response) => {
 });
 
 //Updates an item
-app.put('/items/:id', (request, response) => {
+app.put('/items/:id', function (request, response) {
     const item = items.find(c => c.id === parseInt(request.params.id));
     if(!item) return response.status(404).send('The item with the given ID was not found'); //the "return" exits the handler if the player is not found
     
@@ -113,7 +124,7 @@ app.put('/items/:id', (request, response) => {
     response.send(item);
 });
 
-app.delete('/items/:id', (request,response) => {
+app.delete('/items/:id', function (request,response) {
     const item = items.find(c => c.id === parseInt(request.params.id));
     if(!item) return response.status(404).send('The player with the given ID was not found');
     
@@ -132,4 +143,31 @@ function validateItem(item) {
     return Joi.validate(item, schema);
 }
 
-app.listen(8080, () => console.log('Listening on port 8080...'));
+//Gets total wins for all players
+app.get('/wins', function (request, response) {
+    response.send(wins);  //outputs all the players total wins
+});
+
+//Gets a single players wins
+app.get('/wins/:id', function (request, response) {
+    const total = wins.find(c => c.id === parseInt(request.params.id)); //boolean comparison to see if the player is in the players array
+    if(!total) return response.status(404).send('The player with the given ID was not found'); // error message if id is not found
+    response.send(total);  //outputs player
+});
+
+//Gets total losses for all players
+app.get('/losses', function (request,response) {
+    response.send(losses);
+});
+
+//Gets a single players losses
+app.get('/losses/:id', function (request, response) {
+    const total = losses.find(c => c.id === parseInt(request.params.id));
+    if(!total) return response.status(404).send('The player with the give ID was not found');
+    response.send(total);
+});
+
+//Port
+app.listen(8080, function() {
+    console.log('Listening on port 8080...')
+});

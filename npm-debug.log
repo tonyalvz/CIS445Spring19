@@ -1,0 +1,155 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/ubuntu/.nvm/versions/node/v6.11.2/bin/node',
+1 verbose cli   '/home/ubuntu/.nvm/versions/node/v6.11.2/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'express',
+1 verbose cli   '4.16.2' ]
+2 info using npm@3.10.10
+3 info using node@v6.11.2
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData express@^4.16.4
+8 silly fetchPackageMetaData 4.16.2
+9 silly fetchNamedPackageData express
+10 silly mapToRegistry name express
+11 silly mapToRegistry using default registry
+12 silly mapToRegistry registry https://registry.npmjs.org/
+13 silly mapToRegistry data Result {
+13 silly mapToRegistry   raw: 'express',
+13 silly mapToRegistry   scope: null,
+13 silly mapToRegistry   escapedName: 'express',
+13 silly mapToRegistry   name: 'express',
+13 silly mapToRegistry   rawSpec: '',
+13 silly mapToRegistry   spec: 'latest',
+13 silly mapToRegistry   type: 'tag' }
+14 silly mapToRegistry uri https://registry.npmjs.org/express
+15 silly fetchNamedPackageData 4.16.2
+16 silly mapToRegistry name 4.16.2
+17 silly mapToRegistry using default registry
+18 silly mapToRegistry registry https://registry.npmjs.org/
+19 silly mapToRegistry data Result {
+19 silly mapToRegistry   raw: '4.16.2',
+19 silly mapToRegistry   scope: null,
+19 silly mapToRegistry   escapedName: '4.16.2',
+19 silly mapToRegistry   name: '4.16.2',
+19 silly mapToRegistry   rawSpec: '',
+19 silly mapToRegistry   spec: 'latest',
+19 silly mapToRegistry   type: 'tag' }
+20 silly mapToRegistry uri https://registry.npmjs.org/4.16.2
+21 verbose request uri https://registry.npmjs.org/4.16.2
+22 verbose request no auth needed
+23 info attempt registry request try #1 at 3:38:54 PM
+24 verbose request id 68b46d584edf22e5
+25 http request GET https://registry.npmjs.org/4.16.2
+26 verbose request uri https://registry.npmjs.org/express
+27 verbose request no auth needed
+28 info attempt registry request try #1 at 3:38:54 PM
+29 verbose etag W/"350c39d30c5aab46f3dfa5d16d3566e7"
+30 verbose lastModified Sun, 27 Jan 2019 22:21:28 GMT
+31 http request GET https://registry.npmjs.org/express
+32 http 304 https://registry.npmjs.org/express
+33 verbose headers { date: 'Sat, 16 Feb 2019 15:38:55 GMT',
+33 verbose headers   connection: 'keep-alive',
+33 verbose headers   'set-cookie': [ '__cfduid=d13043a06498f3cbd522ed7c93385e6241550331535; expires=Sun, 16-Feb-20 15:38:55 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+33 verbose headers   'cf-cache-status': 'HIT',
+33 verbose headers   'cache-control': 'max-age=300',
+33 verbose headers   'cf-ray': '4aa11a9db84254bc-ORD',
+33 verbose headers   etag: '"350c39d30c5aab46f3dfa5d16d3566e7"',
+33 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+33 verbose headers   'last-modified': 'Sun, 27 Jan 2019 22:21:28 GMT',
+33 verbose headers   vary: 'accept-encoding, accept',
+33 verbose headers   'x-amz-meta-rev': '3880-700967e806ab1a95222b8af95879dd32',
+33 verbose headers   server: 'cloudflare' }
+34 silly get cb [ 304,
+34 silly get   { date: 'Sat, 16 Feb 2019 15:38:55 GMT',
+34 silly get     connection: 'keep-alive',
+34 silly get     'set-cookie': [ '__cfduid=d13043a06498f3cbd522ed7c93385e6241550331535; expires=Sun, 16-Feb-20 15:38:55 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+34 silly get     'cf-cache-status': 'HIT',
+34 silly get     'cache-control': 'max-age=300',
+34 silly get     'cf-ray': '4aa11a9db84254bc-ORD',
+34 silly get     etag: '"350c39d30c5aab46f3dfa5d16d3566e7"',
+34 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+34 silly get     'last-modified': 'Sun, 27 Jan 2019 22:21:28 GMT',
+34 silly get     vary: 'accept-encoding, accept',
+34 silly get     'x-amz-meta-rev': '3880-700967e806ab1a95222b8af95879dd32',
+34 silly get     server: 'cloudflare' } ]
+35 verbose etag https://registry.npmjs.org/express from cache
+36 verbose get saving express to /home/ubuntu/.npm/registry.npmjs.org/express/.cache.json
+37 verbose correctMkdir /home/ubuntu/.npm correctMkdir not in flight; initializing
+38 http 404 https://registry.npmjs.org/4.16.2
+39 verbose headers { date: 'Sat, 16 Feb 2019 15:38:55 GMT',
+39 verbose headers   'content-type': 'application/json',
+39 verbose headers   'content-length': '21',
+39 verbose headers   connection: 'keep-alive',
+39 verbose headers   'set-cookie': [ '__cfduid=d9d25e08e98e2d32497e11ea55576d60b1550331534; expires=Sun, 16-Feb-20 15:38:54 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+39 verbose headers   'cf-cache-status': 'MISS',
+39 verbose headers   'cache-control': 'max-age=300',
+39 verbose headers   'cf-ray': '4aa11a9dba4c25a9-ORD',
+39 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+39 verbose headers   vary: 'accept-encoding, accept',
+39 verbose headers   server: 'cloudflare' }
+40 silly get cb [ 404,
+40 silly get   { date: 'Sat, 16 Feb 2019 15:38:55 GMT',
+40 silly get     'content-type': 'application/json',
+40 silly get     'content-length': '21',
+40 silly get     connection: 'keep-alive',
+40 silly get     'set-cookie': [ '__cfduid=d9d25e08e98e2d32497e11ea55576d60b1550331534; expires=Sun, 16-Feb-20 15:38:54 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+40 silly get     'cf-cache-status': 'MISS',
+40 silly get     'cache-control': 'max-age=300',
+40 silly get     'cf-ray': '4aa11a9dba4c25a9-ORD',
+40 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+40 silly get     vary: 'accept-encoding, accept',
+40 silly get     server: 'cloudflare' } ]
+41 silly fetchPackageMetaData Error: Not found : 4.16.2
+41 silly fetchPackageMetaData     at makeError (/home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+41 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (/home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:290:14)
+41 silly fetchPackageMetaData     at Request._callback (/home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+41 silly fetchPackageMetaData     at Request.self.callback (/home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/node_modules/request/request.js:187:22)
+41 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
+41 silly fetchPackageMetaData     at Request.emit (events.js:191:7)
+41 silly fetchPackageMetaData     at Request.<anonymous> (/home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/node_modules/request/request.js:1048:10)
+41 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+41 silly fetchPackageMetaData     at Request.emit (events.js:188:7)
+41 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (/home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/node_modules/request/request.js:969:12)
+41 silly fetchPackageMetaData  error for 4.16.2 { Error: Not found : 4.16.2
+41 silly fetchPackageMetaData     at makeError (/home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+41 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (/home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:290:14)
+41 silly fetchPackageMetaData     at Request._callback (/home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+41 silly fetchPackageMetaData     at Request.self.callback (/home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/node_modules/request/request.js:187:22)
+41 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
+41 silly fetchPackageMetaData     at Request.emit (events.js:191:7)
+41 silly fetchPackageMetaData     at Request.<anonymous> (/home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/node_modules/request/request.js:1048:10)
+41 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+41 silly fetchPackageMetaData     at Request.emit (events.js:188:7)
+41 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (/home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/node_modules/request/request.js:969:12) pkgid: '4.16.2', statusCode: 404, code: 'E404' }
+42 silly rollbackFailedOptional Starting
+43 silly rollbackFailedOptional Finishing
+44 silly runTopLevelLifecycles Finishing
+45 silly install printInstalled
+46 verbose stack Error: Not found : 4.16.2
+46 verbose stack     at makeError (/home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+46 verbose stack     at CachingRegistryClient.<anonymous> (/home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:290:14)
+46 verbose stack     at Request._callback (/home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+46 verbose stack     at Request.self.callback (/home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/node_modules/request/request.js:187:22)
+46 verbose stack     at emitTwo (events.js:106:13)
+46 verbose stack     at Request.emit (events.js:191:7)
+46 verbose stack     at Request.<anonymous> (/home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/node_modules/request/request.js:1048:10)
+46 verbose stack     at emitOne (events.js:96:13)
+46 verbose stack     at Request.emit (events.js:188:7)
+46 verbose stack     at IncomingMessage.<anonymous> (/home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/node_modules/request/request.js:969:12)
+47 verbose statusCode 404
+48 verbose pkgid 4.16.2
+49 verbose cwd /home/ubuntu/workspace/CIS445Spring19
+50 error Linux 4.9.120-c9
+51 error argv "/home/ubuntu/.nvm/versions/node/v6.11.2/bin/node" "/home/ubuntu/.nvm/versions/node/v6.11.2/bin/npm" "install" "express" "4.16.2"
+52 error node v6.11.2
+53 error npm  v3.10.10
+54 error code E404
+55 error 404 Not found : 4.16.2
+56 error 404
+57 error 404 '4.16.2' is not in the npm registry.
+58 error 404 You should bug the author to publish it (or use the name yourself!)
+59 error 404 Note that you can also install from a
+60 error 404 tarball, folder, http url, or git url.
+61 verbose exit [ 1, true ]
