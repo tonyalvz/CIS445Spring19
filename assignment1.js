@@ -115,7 +115,7 @@ app.post('/items', function (request, response) {
 //Updates an item
 app.put('/items/:id', function (request, response) {
     const item = items.find(c => c.id === parseInt(request.params.id));
-    if(!item) return response.status(404).send('The item with the given ID was not found'); //the "return" exits the handler if the player is not found
+    if(!item) return response.status(404).send('The item with the given ID was not found'); //the "return" exits the handler if the item is not found
     
     const {error} = validateItem(request.body); //same as result.error, this process if called object destructuring 
     if(error) return response.status(400).send(error.details[0].message);
@@ -129,7 +129,7 @@ app.delete('/items/:id', function (request,response) {
     if(!item) return response.status(404).send('The player with the given ID was not found');
     
     const index = players.indexOf(item);
-    items.splice(index, 1);               //removes one player, if you want to remove multiple then change the constant
+    items.splice(index, 1);               //removes one item, if you want to remove multiple then change the constant
     
     response.send(item);
 });
@@ -150,7 +150,7 @@ app.get('/wins', function (request, response) {
 
 //Gets a single players wins
 app.get('/wins/:id', function (request, response) {
-    const total = wins.find(c => c.id === parseInt(request.params.id)); //boolean comparison to see if the player is in the players array
+    const total = wins.find(c => c.id === parseInt(request.params.id)); //boolean comparison to see if the wins are in the wins array
     if(!total) return response.status(404).send('The player with the given ID was not found'); // error message if id is not found
     response.send(total);  //outputs player
 });
