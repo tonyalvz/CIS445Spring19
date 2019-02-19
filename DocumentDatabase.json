@@ -1,11 +1,44 @@
-
-"Employees": {
-    "employee id": 1,
+{
+    "employeeid": 1,
     "birthday": "1/5/95",
     "firstname": "John",
     "lastname": "Doe",
     "gender": "M",
-    "datehired": "2/5/2010"
+    "datehired": "2/5/2010",
+    "salaries": {
+    "employeeid": 1,
+    "salary": 15,
+    "fromdate": "2/5/2010",
+    "todate": "2/5/2011"
     },
     
+    "titles": {
+    "employeeid": 1,
+    "title": "Coding Specialist",
+    "fromdate": "2/5/2010",
+    "todate": "2/5/2011"
+    },
+    
+    "departments": {
+    "departmentnumber": "23",
+    "departmentname": "Computer Science"
+    },
+    
+    "departmentmanager": {
+    "departmentnumber": "23",
+    "employeeid": 1,
+    "fromdate": "2/5/2010",
+    "todate": "2/5/11"
+    },
+    
+    "departmentemployees": {
+    "employeeid": 1,
+    "departmentnumber": "23",
+    "fromdate": "2/5/2010",
+    "todate": "2/5/2011"
+    }
+    
+}
+
+
     
