@@ -1,10 +1,13 @@
 {
+    "employees": {
     "employeeid": 1,
     "birthday": "1/5/95",
     "firstname": "John",
     "lastname": "Doe",
     "gender": "M",
-    "datehired": "2/5/2010",
+    "datehired": "2/5/2010"
+    },
+    
     "salaries": {
     "employeeid": 1,
     "salary": 15,
