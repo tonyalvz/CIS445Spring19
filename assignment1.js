@@ -17,21 +17,21 @@ app.get('/api/players/:player', function(request, response) {
 //Updates a player
 app.put('/api/players/:player', function(request, response) {
     const player = request.params.player;
-    response.json("Player: " + player + " is now being updated.")
+    response.json("Player: " + player + " is now being updated.");
     response.end();
 });
  
 //Creates a player
 app.post('/api/players/:player', function(request, response) {
     const player = request.params.player;
-    response.json("Player3: " + player + " is now being added.")
+    response.json("Player3: " + player + " is now being added.");
     response.end();
 });
 
 //Delets a player
 app.delete('/api/players/:player', function(request, response) {
    const player = request.params.player;
-   response.json("Player " + player + " is now being deleted.")
+   response.json("Player " + player + " is now being deleted.");
    response.end();
 });
 
@@ -51,21 +51,21 @@ app.get('/api/items/:item', function(request, response) {
 //Updates an item
 app.put('/api/items/:item', function(request, response) {
     const item = request.params.item;
-    response.json("Item: " + item + " is now being updated.")
+    response.json("Item: " + item + " is now being updated.");
     response.end();
 });
 
 //Creates an item
 app.post('/api/items/:item', function(request, response) {
     const item = request.params.item;
-    response.json("Item " + item + " is now being added.")
+    response.json("Item " + item + " is now being added.");
     response.end();
 });
 
 //Deletes an item
 app.delete('/api/items/:item', function(request, response) {
     const item = request.params.item;
-    response.json("Item: " + item + " is now being deleted.")
+    response.json("Item: " + item + " is now being deleted.");
     response.end();
 });
 
@@ -97,5 +97,5 @@ app.get('/api/losses/:total', function(request, response) {
 
 //Port
 app.listen(8080, function() {
-    console.log("Listening on port 8080")
+    console.log("Listening on port 8080");
 });
